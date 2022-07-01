@@ -91,7 +91,7 @@ class Forge
      */
     public function setApiKey($apiKey, $guzzle = null)
     {
-        $this->apiKey = $apiKey;
+        $this->apiKey = trim($apiKey);
 
         $this->guzzle = $guzzle ?: new HttpClient([
             'base_uri' => 'https://forge.laravel.com/api/v1/',
